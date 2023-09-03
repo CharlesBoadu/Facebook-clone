@@ -10,8 +10,7 @@ import { WatchScreen } from "./screens/WatchScreen";
 import { MenuScreen } from "./screens/MenuScreen";
 import { GamingScreen } from "./screens/GamingScreen";
 import { NotificationsScreen } from "./screens/NotificationScreen";
-import { TopNav } from "./components/TopNav";
-import { TopNavSecond } from "./components/TopNavSecond";
+
 
 const Tab = createBottomTabNavigator();
 
@@ -89,8 +88,6 @@ export const AppNavigator = () => {
 export default function App() {
   return (
     <>
-      <TopNav />
-      <TopNavSecond />
       <NavigationContainer>
         <AppNavigator />
       </NavigationContainer>

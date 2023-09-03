@@ -35,12 +35,12 @@ export const Stories = (props) => {
         {data.map((item) => (
             <View
             key={item.id}
-            style={tw`w-32 h-40 bg-gray-200 rounded-xl ml-4 mr-1`}
+            style={tw`w-32 h-40 bg-gray-200 rounded-xl ml-4`}
           >
-            <View style={tw`w-8 h-8 rounded-full bg-white -mb-5`}></View>
+            <View style={tw`w-8 h-8 rounded-full bg-white z-10 m-4`}></View>
             <Image
               source={{ uri: item.image }}
-              style={tw`w-32 h-40 rounded-xl`}
+              style={tw`w-32 h-full rounded-xl -mt-16`}
             />
             <Text style={tw`-top-12 ml-2 text-white`}>{item.name}</Text>
           </View>

@@ -4,83 +4,14 @@ import tw from "tailwind-react-native-classnames";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { NavigationContainer } from "@react-navigation/native";
 import Ionicons from "react-native-vector-icons/Ionicons";
-
-const TopNav = () => {
-  return (
-    <SafeAreaView style={tw`bg-white h-fit`}>
-      <View style={tw`flex flex-row justify-between m-2`}>
-        <View style={tw`flex-1`}>
-          <Text style={tw`text-3xl text-blue-500 p-1 font-semibold`}>Facebook</Text>
-        </View>
-        <View style={tw`flex-2 flex-row `}>
-          <View style={tw`bg-gray-200 rounded-full px-2 py-2 mr-2`}>
-            <Ionicons name="add-outline" size={30} />
-          </View>
-          <View style={tw`bg-gray-200 rounded-full px-2 py-2 mr-2`}>
-            <Ionicons name="search-outline" size={30} />
-          </View>
-          <View style={tw`bg-gray-200 rounded-full px-2 py-2`}>
-            <Ionicons name="arrow-redo-circle-outline" size={30} />
-          </View>
-        </View>
-      </View>
-    </SafeAreaView>
-  );
-};
-
-const HomeScreen = () => {
-  return (
-    <SafeAreaView style={tw`bg-white flex-1 justify-center items-center`}>
-      <Text style={tw`text-black text-2xl font-bold`}>Home Screen</Text>
-      <StatusBar style="auto" />
-    </SafeAreaView>
-  );
-};
-
-const FriendsScreen = () => {
-  return (
-    <SafeAreaView style={tw`bg-white flex-1 justify-center items-center`}>
-      <Text style={tw`text-black text-2xl font-bold`}>Friends Screen</Text>
-      <StatusBar style="auto" />
-    </SafeAreaView>
-  );
-};
-
-const WatchScreen = () => {
-  return (
-    <SafeAreaView style={tw`bg-white flex-1 justify-center items-center`}>
-      <Text style={tw`text-black text-2xl font-bold`}>Watch Screen</Text>
-      <StatusBar style="auto" />
-    </SafeAreaView>
-  );
-};
-
-const MenuScreen = () => {
-  return (
-    <SafeAreaView style={tw`bg-white flex-1 justify-center items-center`}>
-      <Text style={tw`text-black text-2xl font-bold`}>Menu Screen</Text>
-      <StatusBar style="auto" />
-    </SafeAreaView>
-  );
-};
-
-const GamingScreen = () => {
-  return (
-    <SafeAreaView style={tw`bg-white flex-1 justify-center items-center`}>
-      <Text style={tw`text-black text-2xl font-bold`}>Gaming Screen</Text>
-      <StatusBar style="auto" />
-    </SafeAreaView>
-  );
-};
-
-const NotificationsScreen = () => {
-  return (
-    <SafeAreaView style={tw`bg-white flex-1 justify-center items-center`}>
-      <Text style={tw`text-black text-2xl font-bold`}>Settings Screen</Text>
-      <StatusBar style="auto" />
-    </SafeAreaView>
-  );
-};
+import { HomeScreen } from "./screens/HomeScreen";
+import { FriendsScreen } from "./screens/FriendsScreen";
+import { WatchScreen } from "./screens/WatchScreen";
+import { MenuScreen } from "./screens/MenuScreen";
+import { GamingScreen } from "./screens/GamingScreen";
+import { NotificationsScreen } from "./screens/NotificationScreen";
+import { TopNav } from "./components/TopNav";
+import { TopNavSecond } from "./components/TopNavSecond";
 
 const Tab = createBottomTabNavigator();
 
@@ -159,6 +90,7 @@ export default function App() {
   return (
     <>
       <TopNav />
+      <TopNavSecond />
       <NavigationContainer>
         <AppNavigator />
       </NavigationContainer>

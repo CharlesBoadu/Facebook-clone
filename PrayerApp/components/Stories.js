@@ -6,27 +6,27 @@ export const Stories = (props) => {
     {
       id: 1,
       name: "Charles Boadu",
-      image: "https://picsum.photos/200/300",
+      image: "https://picsum.photos/400/300",
     },
     {
       id: 2,
       name: "Jeremiah Quaynor",
-      image: "https://picsum.photos/200/300",
+      image: "https://picsum.photos/500/300",
     },
     {
       id: 3,
       name: "Samuel Kissi",
-      image: "https://picsum.photos/200/300",
+      image: "https://picsum.photos/600/300",
     },
     {
       id: 4,
       name: "Gifty Sowah",
-      image: "https://picsum.photos/200/300",
+      image: "https://picsum.photos/700/300",
     },
     {
       id: 5,
       name: "Andrews Darko",
-      image: "https://picsum.photos/200/300",
+      image: "https://picsum.photos/200/800",
     },
   ];
   return (

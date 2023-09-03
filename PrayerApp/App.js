@@ -5,10 +5,33 @@ import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { NavigationContainer } from "@react-navigation/native";
 import Ionicons from "react-native-vector-icons/Ionicons";
 
+const TopNav = () => {
+  return (
+    <SafeAreaView style={tw`bg-white h-fit`}>
+      <View style={tw`flex flex-row justify-between m-2`}>
+        <View style={tw`flex-1`}>
+          <Text style={tw`text-3xl text-blue-500 p-1 font-semibold`}>Facebook</Text>
+        </View>
+        <View style={tw`flex-2 flex-row `}>
+          <View style={tw`bg-gray-200 rounded-full px-2 py-2 mr-2`}>
+            <Ionicons name="add-outline" size={30} />
+          </View>
+          <View style={tw`bg-gray-200 rounded-full px-2 py-2 mr-2`}>
+            <Ionicons name="search-outline" size={30} />
+          </View>
+          <View style={tw`bg-gray-200 rounded-full px-2 py-2`}>
+            <Ionicons name="arrow-redo-circle-outline" size={30} />
+          </View>
+        </View>
+      </View>
+    </SafeAreaView>
+  );
+};
+
 const HomeScreen = () => {
   return (
-    <SafeAreaView style={tw`bg-red-500 flex-1 justify-center items-center`}>
-      <Text style={tw`text-white text-2xl font-bold`}>Home Screen</Text>
+    <SafeAreaView style={tw`bg-white flex-1 justify-center items-center`}>
+      <Text style={tw`text-black text-2xl font-bold`}>Home Screen</Text>
       <StatusBar style="auto" />
     </SafeAreaView>
   );
@@ -16,16 +39,17 @@ const HomeScreen = () => {
 
 const FriendsScreen = () => {
   return (
-    <SafeAreaView style={tw`bg-blue-500 flex-1 justify-center items-center`}>
-      <Text style={tw`text-white text-2xl font-bold`}>Friends Screen</Text>
+    <SafeAreaView style={tw`bg-white flex-1 justify-center items-center`}>
+      <Text style={tw`text-black text-2xl font-bold`}>Friends Screen</Text>
       <StatusBar style="auto" />
     </SafeAreaView>
   );
 };
+
 const WatchScreen = () => {
   return (
-    <SafeAreaView style={tw`bg-blue-500 flex-1 justify-center items-center`}>
-      <Text style={tw`text-white text-2xl font-bold`}>Watch Screen</Text>
+    <SafeAreaView style={tw`bg-white flex-1 justify-center items-center`}>
+      <Text style={tw`text-black text-2xl font-bold`}>Watch Screen</Text>
       <StatusBar style="auto" />
     </SafeAreaView>
   );
@@ -33,8 +57,8 @@ const WatchScreen = () => {
 
 const MenuScreen = () => {
   return (
-    <SafeAreaView style={tw`bg-blue-500 flex-1 justify-center items-center`}>
-      <Text style={tw`text-white text-2xl font-bold`}>Menu Screen</Text>
+    <SafeAreaView style={tw`bg-white flex-1 justify-center items-center`}>
+      <Text style={tw`text-black text-2xl font-bold`}>Menu Screen</Text>
       <StatusBar style="auto" />
     </SafeAreaView>
   );
@@ -42,8 +66,8 @@ const MenuScreen = () => {
 
 const GamingScreen = () => {
   return (
-    <SafeAreaView style={tw`bg-blue-500 flex-1 justify-center items-center`}>
-      <Text style={tw`text-white text-2xl font-bold`}>Gaming Screen</Text>
+    <SafeAreaView style={tw`bg-white flex-1 justify-center items-center`}>
+      <Text style={tw`text-black text-2xl font-bold`}>Gaming Screen</Text>
       <StatusBar style="auto" />
     </SafeAreaView>
   );
@@ -51,8 +75,8 @@ const GamingScreen = () => {
 
 const NotificationsScreen = () => {
   return (
-    <SafeAreaView style={tw`bg-blue-500 flex-1 justify-center items-center`}>
-      <Text style={tw`text-white text-2xl font-bold`}>Settings Screen</Text>
+    <SafeAreaView style={tw`bg-white flex-1 justify-center items-center`}>
+      <Text style={tw`text-black text-2xl font-bold`}>Settings Screen</Text>
       <StatusBar style="auto" />
     </SafeAreaView>
   );
@@ -66,7 +90,7 @@ export const AppNavigator = () => {
       screenOptions={{
         activeTintColor: "#2290e5",
         inactiveTintColor: "gray",
-        headerShown: false
+        headerShown: false,
       }}
     >
       <Tab.Screen
@@ -133,8 +157,11 @@ export const AppNavigator = () => {
 
 export default function App() {
   return (
-    <NavigationContainer>
-      <AppNavigator />
-    </NavigationContainer>
+    <>
+      <TopNav />
+      <NavigationContainer>
+        <AppNavigator />
+      </NavigationContainer>
+    </>
   );
 }

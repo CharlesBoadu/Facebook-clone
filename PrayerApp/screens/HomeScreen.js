@@ -4,6 +4,7 @@ import { StatusBar } from "expo-status-bar";
 import { TopNav } from "../components/TopNav";
 import { TopNavSecond } from "../components/TopNavSecond";
 import { Stories } from "../components/Stories";
+import { Post } from "../components/Post";
 
 export const HomeScreen = () => {
   return (
@@ -12,7 +13,7 @@ export const HomeScreen = () => {
       <TopNavSecond />
       <Stories />
       <Text style={tw``}></Text>
-      <StatusBar style="auto" />
+      <Post />
     </SafeAreaView>
   );
 };

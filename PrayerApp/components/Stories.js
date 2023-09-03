@@ -33,9 +33,16 @@ export const Stories = (props) => {
     <SafeAreaView style={tw`mt-4`}>
       <ScrollView horizontal style={`rounded-lg h-20 w-20 bg-black`}>
         {data.map((item) => (
-          <View key={item.id} style={tw`w-32 h-40 bg-gray-200 rounded-xl ml-4 mr-1`}>
-            <Image source={{uri: data?.image}}/>
-            <Text style={tw`top-28 ml-2 `}>{item.name}</Text>
+            <View
+            key={item.id}
+            style={tw`w-32 h-40 bg-gray-200 rounded-xl ml-4 mr-1`}
+          >
+            <View style={tw`w-8 h-8 rounded-full bg-white -mb-5`}></View>
+            <Image
+              source={{ uri: item.image }}
+              style={tw`w-32 h-40 rounded-xl`}
+            />
+            <Text style={tw`-top-12 ml-2 text-white`}>{item.name}</Text>
           </View>
         ))}
       </ScrollView>
